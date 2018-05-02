@@ -4,19 +4,33 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="chat">
 
-  <form id="message-form">
-    <input name="message" type="text" placeholder="Write message here"/>
-    <button>Send</button>
-  </form>
-  
-  <button id="send-location">Send Location</button>
+  <div class="chat__sidebar">
+      <h3>People</h3>
+      <div id="users"></div>
+  </div>
+
+  <div class="chat__main">
+    <ol id="messages" class="chat__messages"></ol>
+
+    <div class="chat__footer">
+      <form id="message-form">
+      <input name="message" type="text" placeholder="Write message here" autofocus autocomplete="off"/>
+      <button>Send</button>
+    </form>
+    <button id="send-location">Send Location</button>
+      </div>
+    </div>
+
+
+
   <p>Welcome to the chat app Mikey</p>
 
-  <ol id="messages"></ol>
+
 
 
   <script src="/socket.io/socket.io.js"></script>
